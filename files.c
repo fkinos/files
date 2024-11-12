@@ -262,7 +262,7 @@ static int frame = 0;
 
 static int cursor = 0;
 static int selected;
-static char *last_dir = "/home/fkinos/";
+static char *last_dir = "/home/fkinos";
 
 char **files;
 static int files_counter = 0;
