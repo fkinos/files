@@ -425,12 +425,14 @@ draw ()
 
   clear_screen (BLACK);
 
-  draw_string (0, 0, "NAME", WHITE, BLACK);
-
   for (i = 0; i < files_counter; i++) {
-    draw_string ((i == cursor) ? 8 : 0, i * 8 + 16, files[i], WHITE, BLACK);
+    int selected = i == cursor;
+    draw_string (selected ? 8 : 0, i * 8 + 16, files[i],
+                 selected ? BLACK : WHITE,
+                 selected ? WHITE : BLACK);
   }
 
+  draw_string (0, 0, "NAME", WHITE, BLACK);
   draw_string (0, HEIGHT - 8, last_dir, WHITE, BLACK);
 }
 
