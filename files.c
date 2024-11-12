@@ -425,6 +425,9 @@ draw ()
 
   clear_screen (BLACK);
 
+  if (files_counter == 1)
+    draw_string (0, 24, "<empty>", WHITE, BLACK);
+
   for (i = 0; i < files_counter; i++) {
     int selected = i == cursor;
     draw_string (selected ? 8 : 0, i * 8 + 16, files[i],
