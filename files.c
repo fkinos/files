@@ -7,8 +7,8 @@
 #include <sys/stat.h>
 
 #define TITLE "FILES"
-#define WIDTH 400
-#define HEIGHT 300
+#define WIDTH 320
+#define HEIGHT 200
 
 #define BLACK 0x000000
 #define WHITE 0xffffff
